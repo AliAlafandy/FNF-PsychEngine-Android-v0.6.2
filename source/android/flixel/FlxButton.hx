@@ -10,7 +10,7 @@ import flixel.input.FlxInput;
 import flixel.input.FlxPointer;
 import flixel.input.IFlxInput;
 import flixel.math.FlxPoint;
-import flixel.sound.FlxSound;
+import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxDestroyUtil;
 import flixel.input.touch.FlxTouch;
@@ -404,10 +404,10 @@ private class FlxButtonEvent implements IFlxDestroyable
 	public var callback:Void->Void;
 
 	#if FLX_SOUND_SYSTEM
-	public var sound:FlxSound;
+	public var system:FlxSound;
 	#end
 
-	public function new(?Callback:Void->Void, ?sound:FlxSound)
+	public function new(?Callback:Void->Void, ?system:FlxSound)
 	{
 		callback = Callback;
 
